@@ -9,7 +9,7 @@ module.exports = {
   // bail: 0,
 
   // Respect "browser" field in package.json when resolving modules
-  // browser: false,
+  browser: true,
 
   // The directory where Jest should store its cached dependency information
   // cacheDirectory: "/private/var/folders/z0/h8wkmfjs61sf6nyjzzqslh640000gn/T/jest_dx",
@@ -58,7 +58,9 @@ module.exports = {
   // globalTeardown: null,
 
   // A set of global variables that need to be available in all test environments
-  // globals: {},
+  globals: {
+    window:true
+  },
 
   // An array of directory names to be searched recursively up from the requiring module's location
   // moduleDirectories: [
@@ -158,7 +160,7 @@ module.exports = {
   // testRunner: "jasmine2",
 
   // This option sets the URL for the jsdom environment. It is reflected in properties such as location.href
-  // testURL: "http://localhost",
+  testURL: "http://localhost",
 
   // Setting this value to "fake" allows the use of fake timers for functions such as "setTimeout"
   // timers: "real",
